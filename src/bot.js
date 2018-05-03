@@ -6,12 +6,7 @@ class Bot {
   run() {
     const Discord = require("discord.js");
     const client = new Discord.Client();
-    
-    if (typeof token === 'undefined') {
-      console.error('Set DISCORD_TOKEN env variable with your Discord API token');
-      return;
-    }
-    
+
     client.on("ready", () => {
       console.log("I am ready!");
     });
