@@ -12,11 +12,23 @@ class Bot {
     });
     
     client.on("message", (message) => {
-      if (message.content.startsWith("ping")) {
-        message.channel.send("pong!");
+      const voiceChannel = message.member.voiceChannel;
+
+      if (message.content.startsWith("join")) {
+        message.channel.send(`Joining ${voiceChannel}`);
+
+        // change to async, add babel es2017
+        voiceChannel.join()
+          .then(connection => console.log('Connected!'))
+          .catch(console.error);
+      }
+
+      if (message.content.startsWith("leave")) {
+        message.channel.send(`Leaving ${voiceChannel}`);
+        voiceChannel.leave();
       }
     });
-    
+
     client.login(this.token);
   }
 }
