@@ -11,5 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2"
+  },
+  "repository": "git@github.com:luanorlandi/discord-bot.git",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
   }
 }
