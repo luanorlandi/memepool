@@ -14,12 +14,20 @@ class Bot {
     client.on("message", (message) => {
       const voiceChannel = message.member.voiceChannel;
 
-      if (message.content.startsWith("join")) {
+      if (message.content.startsWith("vitas")) {
         message.channel.send(`Joining ${voiceChannel}`);
 
         // change to async, add babel es2017
         voiceChannel.join()
-          .then(connection => console.log('Connected!'))
+          .then(connection => {
+            console.log('Connected!');
+
+            const dispatcher = connection.playArbitraryInput('https://raw.githubusercontent.com/luanorlandi/javascript30/master/02-clock/sounds/vitas-blblbl.wav');
+
+            dispatcher.on('end', end => {
+              voiceChannel.leave();
+            });
+          })
           .catch(console.error);
       }
 
