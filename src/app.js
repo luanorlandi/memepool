@@ -6,5 +6,6 @@ if (typeof token === 'undefined') {
 } else {
   const bot = new Bot(token);
 
+  bot.login();
   bot.run();
 }

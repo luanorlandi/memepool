@@ -3,16 +3,19 @@ import Discord from 'discord.js';
 class Bot {
   constructor(token) {
     this.token = token;
+    this.client = new Discord.Client();
+  }
+
+  login() {
+    this.client.login(this.token);
+
+    this.client.on('ready', () => {
+      console.log('I am ready!');
+    });
   }
 
   run() {
-    const client = new Discord.Client();
-
-    client.on('ready', () => {
-      console.log('I am ready!');
-    });
-
-    client.on('message', (message) => {
+    this.client.on('message', (message) => {
       const { voiceChannel } = message.member;
 
       if (message.content.startsWith('vitas')) {
@@ -23,7 +26,7 @@ class Bot {
           .then((connection) => {
             console.log('Connected!');
 
-            const dispatcher = connection.playArbitraryInput('https://raw.githubusercontent.com/luanorlandi/javascript30/master/02-clock/sounds/vitas-blblbl.wav');
+            const dispatcher = connection.playArbitraryInput('http://localhost:8080/src/assets/vitas.wav');
 
             dispatcher.on('end', () => {
               voiceChannel.leave();
@@ -37,8 +40,6 @@ class Bot {
         voiceChannel.leave();
       }
     });
-
-    client.login(this.token);
   }
 }
 
