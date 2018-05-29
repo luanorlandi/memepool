@@ -1,0 +1,5 @@
+{
+  "error": {
+    "noToken": "Set DISCORD_TOKEN env variable with your Discord API token"
+  }
+}
