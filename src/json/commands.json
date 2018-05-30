@@ -1,0 +1,9 @@
+{
+  ".vitas": {
+    "action": "playAudio",
+    "file": "vitas.wav"
+  },
+  "!leave": {
+    "action": "leaveVoiceChannel"
+  }
+}
