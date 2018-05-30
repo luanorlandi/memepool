@@ -1,9 +1,14 @@
 {
+  "!help": {
+    "action": "showHelp",
+    "description": "list available commands"
+  },
+  "!leave": {
+    "action": "leaveVoiceChannel",
+    "description": "leave voice channel (you must in the same channel)"
+  },
   ".vitas": {
     "action": "playAudio",
     "file": "vitas.wav"
-  },
-  "!leave": {
-    "action": "leaveVoiceChannel"
   }
 }
