@@ -3,6 +3,31 @@ import Discord from 'discord.js';
 /* eslint-enable no-unused-vars */
 
 import server from '../json/server.json';
+import commands from '../json/commands.json';
+
+/**
+ * @param {Discord.Message} message
+ */
+const showHelp = (message) => {
+  const entries = Object.entries(commands);
+  const commandsList = entries.reduce((accumulator, [key, value]) => {
+    const description = value.description ? ` *${value.description}*` : '';
+
+    return accumulator === '' ?
+      `**${key}**${description}` :
+      `${accumulator}\n**${key}**${description}`;
+  }, '');
+
+  message.channel.send(commandsList);
+};
+
+/**
+ * @param {Discord.Message} message
+ */
+const leaveVoiceChannel = (message) => {
+  const { voiceChannel } = message.member;
+  voiceChannel.leave();
+};
 
 /**
  * @param {Discord.Message} message
@@ -21,14 +46,10 @@ const playAudio = async (message, command) => {
   }
 };
 
-/**
- * @param {Discord.Message} message
- */
-const leaveVoiceChannel = (message) => {
-  const { voiceChannel } = message.member;
-  voiceChannel.leave();
+const actions = {
+  playAudio,
+  leaveVoiceChannel,
+  showHelp,
 };
-
-const actions = { playAudio, leaveVoiceChannel };
 
 export default actions;

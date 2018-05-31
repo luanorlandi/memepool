@@ -1,7 +1,7 @@
 {
-  "name": "bot-test",
+  "name": "memepool",
   "version": "1.0.0",
-  "description": "",
+  "description": "Play meme sounds in Discord",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/app.js --exec babel-node --presets babel-preset-env",
@@ -17,7 +17,7 @@
     "opusscript": "^0.0.6",
     "ytdl-core": "^0.20.2"
   },
-  "repository": "git@github.com:luanorlandi/discord-bot.git",
+  "repository": "git@github.com:luanorlandi/memepool.git",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
