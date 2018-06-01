@@ -9,6 +9,38 @@
   },
   ".vitas": {
     "action": "playAudio",
-    "file": "vitas.wav"
+    "file": "vitas.ogg"
+  },
+  ".vitas2": {
+    "action": "playAudio",
+    "file": "vitas2.ogg"
+  },
+  ".faustao": {
+    "action": "playAudio",
+    "file": "faustao.ogg"
+  },
+  ".faustao2": {
+    "action": "playAudio",
+    "file": "faustao2.ogg"
+  },
+  ".tapita": {
+    "action": "playAudio",
+    "file": "tapita.ogg"
+  },
+  ".tapita2": {
+    "action": "playAudio",
+    "file": "tapita2.ogg"
+  },
+  ".tapita3": {
+    "action": "playAudio",
+    "file": "tapita3.ogg"
+  },
+  ".tapita4": {
+    "action": "playAudio",
+    "file": "tapita4.ogg"
+  },
+  ".tapita5": {
+    "action": "playAudio",
+    "file": "tapita5.ogg"
   }
 }
