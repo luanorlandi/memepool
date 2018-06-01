@@ -23,7 +23,7 @@ The main purpose of Memepool is to amplify entertainment in Discord by using mem
 
 We are grateful for contributions to this bot.
 
-Check out the [CONTRIBUTING](./CONTRIBUTING.md) to see how to propose more content to the bot, features, improvements and issues.
+Check out the [CONTRIBUTING.md](./CONTRIBUTING.md) to see how to propose more content to the bot, features, improvements and issues.
 
 ## License
 
