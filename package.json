@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/app.js --exec babel-node --presets babel-preset-env",
     "audio-server": "python3 -m http.server 8080",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "build": "babel src -d build"
   },
   "author": "",
   "license": "ISC",
