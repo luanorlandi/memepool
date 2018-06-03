@@ -1,8 +1,8 @@
 import Discord from 'discord.js';
 
+import { discordToken } from './env';
 import actions from './actions';
 import commands from '../json/commands.json';
-import text from '../json/text.json';
 
 const client = new Discord.Client();
 
@@ -22,11 +22,10 @@ const handleMessage = (message) => {
   action(message, command);
 };
 
-const botStart = async (token) => {
+const botStart = async () => {
   try {
-    await client.login(token);
+    await client.login(discordToken);
     client.on('message', handleMessage);
-    console.log(text.ready);
   } catch (error) {
     console.error(error);
   }

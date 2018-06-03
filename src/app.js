@@ -1,10 +1,15 @@
 import botStart from './js/bot';
-import token from './js/token';
+import { serverUrl, discordToken } from './js/env';
 import text from './json/text.json';
 
-if (typeof token === 'undefined') {
+if (typeof discordToken === 'undefined') {
   console.error(text.setToken);
   process.exit(1);
 }
 
-botStart(token);
+if (typeof serverUrl === 'undefined') {
+  console.error(text.setServer);
+  process.exit(1);
+}
+
+botStart();
