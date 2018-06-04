@@ -1,4 +1,4 @@
 {
-  "setToken": "Set DISCORD_TOKEN env variable with your Discord API token",
-  "ready": "Ready!"
+  "setToken": "Set DISCORD_TOKEN env variable with Discord API token",
+  "setServer": "Set SERVER_URL env variable with audio server URL"
 }

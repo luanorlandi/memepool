@@ -2,7 +2,7 @@
 import Discord from 'discord.js';
 /* eslint-enable no-unused-vars */
 
-import server from '../json/server.json';
+import { serverUrl } from './env';
 import commands from '../json/commands.json';
 
 /**
@@ -40,7 +40,7 @@ const playAudio = async (message, command) => {
 
   try {
     const connection = await voiceChannel.join();
-    connection.playArbitraryInput(`${server.url}${file}`);
+    connection.playArbitraryInput(`${serverUrl}${file}`);
   } catch (error) {
     console.error(error);
   }
